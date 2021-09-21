@@ -7,9 +7,13 @@ test("if numbers in even", () => {
 });
 
 
+const dateRegex = /^\d{1,2}\-\d{1,2}\-\d{4}$/;
 test("if date is string", () => {
+
 	const result = formatDate("2019-1-02");
 
-	expect(result).toBe("2/1/2019");
+	expect(result).toMatch(dateRegex);
 });
+
+
 
